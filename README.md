@@ -27,3 +27,11 @@ The adapted data from the publicly available dataset from the ACTIV-3–TICO (Ac
 To induce missingness at random in the dataset, we model the probability of individual i dropping out on day t as logit(pit)= Xi+ Hit+ t, where Xi are the baseline covariates age and vaccination status, Hit are time-varying covariates indicating an individual’s current location and their total time spent at out of the hospital up until that point, and t = -0.5t + b is a baseline time-dependent function with b calibrated to reach the desired proportion of missingness in the outcome in expectation. For missing completely at random (MCAR) scenarios, we set = = 0. We assume all missingness is drop-out missingness—that is, an individual drops out on a particular day of data collection and all subsequent data for that individual are missing. Once pit is calculated for each individual, we simulate drop out for each individual on each of days 1 to 60 and induce missingness in all outcome data for the individual on and after their day of drop out, if any. If a simulated day of drop out is after the day an individual died, no missingness is added, which results in an overall proportion of missingness that is slightly lower than the targeted value.
 
 To each simulated dataset, we apply the two imputation approaches and fit a proportional odds model. In addition, we perform a complete case analysis, dropping patients with simulated missingness. From the fit models, we obtain the point estimate and 95% CI for the odds ratio as well as the p-value testing the odds ratio is not 1. For each combination of missing data mechanism and target proportion missing, we simulate 1,000 replicates. For comparison, we also obtain the odds ratio estimate from the complete TICO dataset without inducing missingness; we treat this “gold standard” value as the truth in error metrics. To compare methods, we measure (1) the mean squared error (MSE) of the odds ratio estimate compared with the estimate from the gold standard analysis, (2) the coverage probability, and (3) the rejection rate, or proportion of simulations in which the p-value is less than .05.
+
+Results:
+
+Low Missingness:
+![alt text](results_low_missingness.png)
+
+High Missingness:
+![alt text](results_high_missingness.png)
