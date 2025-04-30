@@ -1,4 +1,4 @@
-# STRIVE_Impute_Sim
+# STRIVE Imputation Simulation
 This simulation evaluates imputation strategies for the primary endpoint of two ongoing STRIVE (Strategies and Treatments for Respiratory Infections and Viral Emergencies) platform clinical trials, whose aim is to improve patient health for those hospitalized with upper respiratory infections.
 
 STRIVE (Strategies and Treatments for Respiratory Infections & Viral Emergencies; INSIGHT 018) aims to provide an agile research platform able to investigate strategies and treatments that may improve the health of patients hospitalized with a respiratory infection. The primary endpoint for two on-going STRIVE trials (NCT05605093 & NCT05822583) is the DRS-60, which is an ordinal composite endpoint reflecting the day of recovery and vital status through day 60. The DRS-60 will take on one of the following 63 values:
